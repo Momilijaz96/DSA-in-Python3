@@ -6,8 +6,10 @@ Data Strucutres implemented so far:
 3. Stacks
 4. Queues
 5. Tree
+6. Binary Tree
 
 
 Algorithms implemented so far:
-1. Tree Traversals - Inorder, Preorder, Postorder
-2. 
+1. Depth First Search (Inorder, Preorder, Postorder)
+2. Breath First Search 
+3. 
