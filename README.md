@@ -9,7 +9,5 @@ Data Strucutres implemented so far:
 
 
 Algorithms implemented so far:
-1. Tree Traversals
-  a. In order 
-  b. Pre order
-  c. Post order
+1. Tree Traversals - Inorder, Preorder, Postorder
+2. 
