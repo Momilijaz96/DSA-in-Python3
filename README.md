@@ -10,6 +10,6 @@ Data Strucutres implemented so far:
 
 
 Algorithms implemented so far:
-1. Depth First Search (Inorder, Preorder, Postorder)
-2. Breath First Search 
+1. Depth First Search (Inorder, Preorder, Postorder) - Iteratively + Recursively 
+2. Breath First Search - Iteratively
 3. 
