@@ -55,8 +55,16 @@ if __name__=='__main__':
     root.left.right=BinaryNode(3)
     root.right.left=BinaryNode(5)
     root.right.right=BinaryNode(7)
+    #Postorder tree example
+    post_root=BinaryNode(7)
+    post_root.left=BinaryNode(3)
+    post_root.right=BinaryNode(6)
+    post_root.left.left=BinaryNode(1)
+    post_root.left.right=BinaryNode(2)
+    post_root.right.left=BinaryNode(4)
+    post_root.right.right=BinaryNode(5)
 
     print("Itr_PreOrder: ",PreOrderTraversal_itr(root))
-    print("Itr_PostOrder: ",PostOrderTraversal_itr(root))
+    print("Itr_PostOrder: ",PostOrderTraversal_itr(post_root))
     print("Itr_InOrder: ",InOrderTraversal_itr(root))
 
