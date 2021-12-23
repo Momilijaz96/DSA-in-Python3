@@ -13,7 +13,7 @@ Algorithms implemented so far:
 1. Depth First Search (Inorder, Preorder, Postorder) - Recursively 
 2. Depth First Search (Inorder, Preorder, Postorder [with 1 and 2 stacks]) - Iteratively
 3. Breath First Search - Iteratively using Queue
-4. 
+4. Binary Tree Depth using BFS(with and without log) and Recursion
 
 
 <h2>Acknowledgments</h2>
