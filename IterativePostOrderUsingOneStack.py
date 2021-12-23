@@ -7,7 +7,7 @@ Once we reach leftmost node, print it if it doesn’t have a right child.
 If it has a right child,
 then change root so that the right child is processed before.  
 '''
-
+#This approach uses left-right-Root soln, which increases the if else checks in code
 def PostOrderOneStack(node):
     stack=[node]
     while(node!=None and len(stack)>0):
@@ -44,7 +44,9 @@ def PostOrderOneStack(node):
         else:
             stack.append(node.right)
             node=node.right
-
+#Alternative soln: GeeksforGekks: code is smaller, samle logic but order is left-Root-right
+#https://www.geeksforgeeks.org/iterative-postorder-traversal-using-stack/
+            
 if __name__=='__main__':
     #Example 1 - ans: 654328(10)971
     root=BinaryNode(1)
