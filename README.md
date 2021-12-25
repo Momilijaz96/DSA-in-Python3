@@ -16,6 +16,7 @@ Algorithms implemented so far:
 4. Binary Tree Depth using BFS(with and without log) and Recursion
 5. PostOrder, PreOrder and InOrder traversal using OneStack
 6. TopView of A Binary Tree
+7. Check Balaned Binary Tree
 
 
 <h2>Acknowledgments</h2>
