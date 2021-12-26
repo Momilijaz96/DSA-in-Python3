@@ -17,33 +17,28 @@ def PostOrderTraversal_itr(node): #Using 2 stacks
 
 def PreOrderTraversal_itr(node):
     stack=[node]
-    vals=[] #Put values in a list
-    if node!=None:
-        while(len(stack)>0):
-            vals.append(node.data)
-            #Appending nodes as Root-r-l on stack
-            if node.right!=None:
-                stack.append(node.right)
-            if node.left!=None:
-                stack.append(node.left)
-            node=stack.pop()
+    vals=[]
+    while(len(stack)>0):
+        if node: 
+            vals.append(node.val)
+            if node.right: stack.append(node.right)
+            if node.left: stack.append(node.left)
+        node=stack.pop()
     return vals
 
 def InOrderTraversal_itr(node):
-    stack=[node]
+    if root==None: return None
+    stack=[root]
+    node=root
     vals=[]
     while(len(stack)>0):
-        #Left
-        while(node.left!=None):
-            stack.append(node.left)
+        while(node):
             node=node.left
-        #Root
+            if node: stack.append(node)
         node=stack.pop()
-        vals.append(node.data)
-        #Right
-        if (node.right!=None):
-            stack.append(node.right)
-            node=node.right
+        vals.append(node.val)
+        node=node.right
+        if node: stack.append(node)
     return vals
 
 

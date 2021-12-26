@@ -7,6 +7,30 @@ Once we reach leftmost node, print it if it doesn’t have a right child.
 If it has a right child,
 then change root so that the right child is processed before.  
 '''
+#PostOrder using one stack 2
+def PostOrderOneStack2(node):
+    if root==None: return None
+    vals=[]
+    stack=[]
+    node=root
+    while(1):
+        while(node):
+            if node.right: stack.append(node.right)
+            stack.append(node)
+            node=node.left
+        node=stack.pop()
+        if len(stack)>0 and node.right==stack[-1]:
+            rn=stack.pop()
+            stack.append(node)
+            node=rn
+        else:
+            vals.append(node.val)
+            node=None
+        
+        if len(stack)==0:
+            break
+    return vals
+
 #This approach uses left-right-Root soln, which increases the if else checks in code
 def PostOrderOneStack(node):
     stack=[node]
