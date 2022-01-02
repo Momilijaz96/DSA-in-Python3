@@ -15,10 +15,13 @@ Algorithms implemented so far:
 3. Breath First Search - Iteratively using Queue
 4. Binary Tree Depth using BFS(with and without log) and Recursion
 5. PostOrder, PreOrder and InOrder traversal using OneStack
-6. TopView of A Binary Tree
-7. Check Balaned Binary Tree
-8. Maximum Sum Path
-9. ZigZag Traversal
+6. Check Balaned Binary Tree
+7. Maximum Sum Path
+8. ZigZag Traversal
+9. Identical Trees
+10. Vertical Order Traversal
+11. Binary Tree Diameter
+12. Check for Balanced Binary Tree
 
 
 <h2>Acknowledgments</h2>
