@@ -17,6 +17,8 @@ Algorithms implemented so far:
 5. PostOrder, PreOrder and InOrder traversal using OneStack
 6. TopView of A Binary Tree
 7. Check Balaned Binary Tree
+8. Maximum Sum Path
+9. ZigZag Traversal
 
 
 <h2>Acknowledgments</h2>
