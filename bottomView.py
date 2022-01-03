@@ -1,40 +1,45 @@
 from sys import stdin, setrecursionlimit
-from queue import Queue
-setrecursionlimit(10**7)
+import queue
+import sys
+from collections import OrderedDict
+setrecursionlimit(10**6)
 
-# Following is the TreeNode class structure:
+
+# Following is the structure used to represent the Binary Tree Node.
 class BinaryTreeNode:
     def __init__(self, data):
-        self.val = data
+        self.data = data
         self.left = None
         self.right = None
+
+	
 def add_val(dic,key,val):
     if key not in dic:
         dic[key]=[val]
     else:
         dic[key].append(val)
     return dic
-def getTopView(root):
+def bottomView(root):
     # Write your code here.
     if root==None: return []
-    if root.left==None and root.right==None: return [root.val]
+    if root.left==None and root.right==None: return [root.data]
     offset=0
     q=[(root,offset)]
-    vals={0: [root.val]}
+    vals={0: [root.data]}
     res=[]
     
     while(len(q)>0):
         node,offset=q.pop(0)
         if node.left:
             q.append((node.left,offset-1))
-            vals=add_val(vals,offset-1,node.left.val)
+            vals=add_val(vals,offset-1,node.left.data)
         if node.right:
             q.append((node.right,offset+1))
-            vals=add_val(vals,offset+1,node.right.val)
+            vals=add_val(vals,offset+1,node.right.data)
     
     #Take the first elem from list
     for k in vals:
-        vals[k]=vals[k][0]
+        vals[k]=vals[k][-1]
     
     #Sort the keys
     keys=list(vals.keys())
@@ -49,54 +54,48 @@ def getTopView(root):
     return res
 
 
-# Taking input.
+# Taking level-order input using fast I/O method.
 def takeInput():
+    levelOrder = list(map(int, stdin.readline().strip().split(" ")))
+    start = 0
 
-    arr = list(map(int, stdin.readline().strip().split(" ")))
+    length = len(levelOrder)
 
-    rootData = arr[0]
-
-    n = len(arr)
-
-    if(rootData == -1):
+    if length == 1:
         return None
 
-    root = BinaryTreeNode(rootData)
-    q = Queue()
+    root = BinaryTreeNode(levelOrder[start])
+    start += 1
+
+    q = queue.Queue()
     q.put(root)
-    index = 1
-    while(q.qsize() > 0):
+
+    while not q.empty():
         currentNode = q.get()
 
-        leftChild = arr[index]
+        leftChild = levelOrder[start]
+        start += 1
 
-        if(leftChild != -1):
+        if leftChild != -1:
             leftNode = BinaryTreeNode(leftChild)
             currentNode.left = leftNode
             q.put(leftNode)
 
-        index += 1
-        rightChild = arr[index]
+        rightChild = levelOrder[start]
+        start += 1
 
-        if(rightChild != -1):
+        if rightChild != -1:
             rightNode = BinaryTreeNode(rightChild)
-            currentNode .right = rightNode
+            currentNode.right = rightNode
             q.put(rightNode)
-
-        index += 1
 
     return root
 
-# Printing the tree nodes.
-def printAns(ans):
-    for x in ans:
-        print(x, end=" ")
-    print()
-
 
 # Main.
-T = int(stdin.readline().strip())
-for i in range(T):
+t = int(input())
+while t:
     root = takeInput()
-    ans = getTopView(root)
-    printAns(ans)
+    answer = bottomView(root)
+    print(*answer)
+    t = t - 1
