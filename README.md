@@ -24,7 +24,10 @@ Algorithms implemented so far:
 12. Check for Balanced Binary Tree
 13. [Child Sum Property](https://www.codingninjas.com/codestudio/problems/childrensumproperty_790723?source=youtube&amp;campaign=Striver_Tree_Videos&amp;utm_source=youtube&amp;utm_medium=affiliate&amp;utm_campaign=Striver_Tree_Videos&leftPanelTab=1)
 14. [Lowest Common Ascestor](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbi15eFJXRTdRbVo4TjF1QjR6SXB2bjVyUWhqZ3xBQ3Jtc0ttSlRkUkV5d0pWS0YwRXlaWEc4RlZRNzBuakJybFRsYXRGbERld1JsdGE0eU5ncFNyS2pRVVJuaDFaM29BTmFwcmtjbU42R0NHZUtjaWttcjFMM2pIQkNVVkNwNVBGZEtnSUpKdFQwWGF0ckQ2UV9Ycw&q=https%3A%2F%2Fleetcode.com%2Fproblems%2Flowest-common-ancestor-of-a-binary-tree%2F)
-15. Root to all leaves path()
+15. Root to all leaves path
+16. Top View
+17. Bottom View
+18. Right View
 
 
 <h2>Acknowledgments</h2>
